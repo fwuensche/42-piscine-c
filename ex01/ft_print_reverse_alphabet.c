@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 16:14:32 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/28 16:19:27 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/28 16:30:52 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_putchar(i)
 {
 	write(1, &i, 1);
-	return;
 }
 
 void	ft_print_reverse_alphabet(void)
