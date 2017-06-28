@@ -1,1 +1,1 @@
-echo `ldapsearch -Q -LLL "(sn=*bon*)" | grep "uid:" | wc -l`
+ldapsearch -Q sn=*bon* | grep "search:" | cut -d : -f 2 | sed "s/[[:space:]]//g" 
