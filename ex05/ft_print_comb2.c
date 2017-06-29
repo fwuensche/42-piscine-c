@@ -6,16 +6,9 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 17:44:33 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/29 15:05:59 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 15:08:12 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_print_current_number(int n)
 {
@@ -51,10 +44,4 @@ void	ft_print_comb2(void)
 		}
 		i++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_comb2();
-	return (0);
 }
