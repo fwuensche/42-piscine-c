@@ -3,19 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwuensch <fwuensch@student.42.us.or>       +#+  +:+       +#+        */
+/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 16:32:55 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/28 16:39:02 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 10:17:00 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_is_negative(int n)
 {
@@ -27,12 +20,4 @@ void	ft_is_negative(int n)
 	{
 		ft_putchar('N');
 	}
-}
-
-int		main(void)
-{
-	ft_is_negative(-1);
-	ft_is_negative(0);
-	ft_is_negative(1);
-	return (0);
 }
