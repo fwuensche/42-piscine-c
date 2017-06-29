@@ -3,19 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwuensch <fwuensch@student.42.us.or>       +#+  +:+       +#+        */
+/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 16:39:31 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/28 17:22:03 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 10:21:30 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 void	ft_print_comb(void)
 {
@@ -44,10 +37,4 @@ void	ft_print_comb(void)
 		}
 		number[0]++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_comb();
-	return (0);
 }
