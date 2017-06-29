@@ -6,13 +6,14 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 15:19:20 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/29 15:45:30 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 15:47:47 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putchar(char c) {
+void	ft_putchar(char c)
+{
 	write(1, &c, 1);
 }
 
@@ -34,7 +35,8 @@ void	ft_putnbr(int nb)
 	}
 }
 
-int main(int argc, char const *argv[]) {
+int		main(void)
+{
 	ft_putnbr(-123456);
 	ft_putchar(' ');
 	ft_putnbr(0);
@@ -44,5 +46,5 @@ int main(int argc, char const *argv[]) {
 	ft_putnbr(123);
 	ft_putchar(' ');
 	ft_putnbr(1234);
-	return 0;
+	return (0);
 }
