@@ -12,9 +12,9 @@
 
 #include <unistd.h>
 
-void	ft_putchar(i)
+void	ft_putchar(char c)
 {
-	write(1, &i, 1);
+	write(1, &c, 1);
 }
 
 void	ft_print_reverse_alphabet(void)
@@ -22,15 +22,15 @@ void	ft_print_reverse_alphabet(void)
 	char	i;
 
 	i = 'z';
-	while ( i >= 'a' )
+	while (i >= 'a')
 	{
 		ft_putchar(i);
 		i--;
 	}
 }
 
-int main()
+int		main(void)
 {
 	ft_print_reverse_alphabet();
+	return (0);
 }
-
