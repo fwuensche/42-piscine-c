@@ -6,20 +6,9 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 17:44:33 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/29 15:08:12 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 16:22:16 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_print_current_number(int n)
-{
-	int		a1;
-	int		a2;
-
-	a1 = (n / 10) + 48;
-	a2 = (n % 10) + 48;
-	ft_putchar(a1);
-	ft_putchar(a2);
-}
 
 void	ft_print_comb2(void)
 {
@@ -32,9 +21,11 @@ void	ft_print_comb2(void)
 		j = i + 1;
 		while (j <= 99)
 		{
-			ft_print_current_number(i);
+			ft_putchar((i / 10) + 48);
+			ft_putchar((i % 10) + 48);
 			ft_putchar(' ');
-			ft_print_current_number(j);
+			ft_putchar((j / 10) + 48);
+			ft_putchar((j % 10) + 48);
 			if (i != 98 || j != 99)
 			{
 				ft_putchar(',');
