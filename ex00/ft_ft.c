@@ -6,23 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 19:53:41 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/29 21:19:20 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 10:55:33 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-}
-
-int		main(void)
-{
-	int a;
-	int	*ptr;
-
-	a = 10;
-	ptr = &a;
-	ft_ft(ptr);
-	printf("%d\n", a);
-	return (0);
 }
