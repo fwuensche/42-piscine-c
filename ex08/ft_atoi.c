@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/30 11:16:37 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 11:51:02 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 15:22:50 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@ int	ft_atoi(char *str)
 	int	result;
 	int	sign;
 
-	// skip useless characters
-	while (*str != '\0' && (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r'))
+	while (*str != '\0' && !(*str >= '0' && *str <= '9'))
 		str++;
-
-	// determine if positive/negative
+	str--;
 	sign = 1;
 	if (*str == '+')
 		str++;
@@ -28,8 +26,6 @@ int	ft_atoi(char *str)
 		sign = -1;
 		str++;
 	}
-
-	// add digits to actual number
 	result = 0;
 	while ((*str >= '0' && *str <= '9') && *str != '\0')
 	{
@@ -40,9 +36,9 @@ int	ft_atoi(char *str)
 	return (result * sign);
 }
 
-int main(void)
+int	main(void)
 {
-	char name[] = "  -123  huas ";
+	char name[] = "  -54323  huas ";
 
 	printf("%d\n", ft_atoi(name));
 	return (0);
