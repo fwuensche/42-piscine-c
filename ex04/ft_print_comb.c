@@ -6,9 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 16:39:31 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/29 10:21:30 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 17:29:19 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int		ft_putchar(char c);
 
 void	ft_print_comb(void)
 {
