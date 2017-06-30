@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 21:54:37 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 11:11:46 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 11:25:34 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int		main(void)
 {
 	char name[] = "Flavio";
 
-	ft_putstr(&name[0]);
+	ft_putstr(name);
 	return (0);
 }
