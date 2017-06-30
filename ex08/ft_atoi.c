@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/30 11:16:37 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 15:22:50 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 16:13:11 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_atoi(char *str)
 		sign = -1;
 		str++;
 	}
+	else
+		str++;
 	result = 0;
 	while ((*str >= '0' && *str <= '9') && *str != '\0')
 	{
@@ -34,12 +36,4 @@ int	ft_atoi(char *str)
 		str++;
 	}
 	return (result * sign);
-}
-
-int	main(void)
-{
-	char name[] = "  -54323  huas ";
-
-	printf("%d\n", ft_atoi(name));
-	return (0);
 }

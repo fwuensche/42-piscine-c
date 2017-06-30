@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 22:10:08 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 11:14:53 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 16:06:55 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,4 @@ char	*ft_strrev(char *str)
 		end--;
 	}
 	return (res);
-}
-
-int		main(void)
-{
-	char name[] = "Flavio";
-
-	printf("%s\n", ft_strrev(&name[0]));
-	return (0);
 }

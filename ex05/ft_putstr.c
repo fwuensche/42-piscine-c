@@ -6,16 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/29 21:54:37 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 11:25:34 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 15:31:33 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -24,12 +19,4 @@ void	ft_putstr(char *str)
 		ft_putchar(*str);
 		str++;
 	}
-}
-
-int		main(void)
-{
-	char name[] = "Flavio";
-
-	ft_putstr(name);
-	return (0);
 }
