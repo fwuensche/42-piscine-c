@@ -6,11 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/28 17:44:33 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/29 17:29:23 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/29 21:58:09 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+void	ft_putchar(char c);
 
 void	ft_print_comb2(void)
 {
