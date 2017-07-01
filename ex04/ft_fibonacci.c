@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 00:48:57 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 10:22:12 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/01 10:33:01 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/01 10:56:21 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
+int	ft_fibonacci(int index)
 {
-	int response;
-
-	if (power < 0 || nb == 0)
+	if (index < 0)
+		return (-1);
+	if (index == 0)
 		return (0);
-	if (power == 0 || nb == 1)
+	if (index == 1)
 		return (1);
-	response = 1;
-	while (power > 0)
-	{
-		response = response * nb;
-		power--;
-	}
-	return response;
+	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
 }
 
 int	main(void)
 {
-	printf("%d\n", ft_iterative_power(-2, 3));
-	printf("%d\n", ft_iterative_power(0, 2));
-	printf("%d\n", ft_iterative_power(3, 0));
-	printf("%d\n", ft_iterative_power(13, 1));
-	printf("%d\n", ft_iterative_power(4, 2));
+	printf("%d\n", ft_fibonacci(0));
+	printf("%d\n", ft_fibonacci(1));
+	printf("%d\n", ft_fibonacci(2));
+	printf("%d\n", ft_fibonacci(3));
+	printf("%d\n", ft_fibonacci(4));
+	printf("%d\n", ft_fibonacci(5));
 	return (0);
 }

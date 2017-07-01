@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_power.c                               :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 00:48:57 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 10:22:12 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/01 10:56:52 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/01 11:27:03 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_power(int nb, int power)
+int ft_sqrt(int nb)
 {
-	int response;
+	int i;
 
-	if (power < 0 || nb == 0)
+	if (nb <= 0)
 		return (0);
-	if (power == 0 || nb == 1)
+	if (nb == 1)
 		return (1);
-	response = 1;
-	while (power > 0)
+	i = 0;
+	while (i <= 46341 && i <= nb / 2)
 	{
-		response = response * nb;
-		power--;
+		if (i * i == nb)
+			return (i);
+		i++;
 	}
-	return response;
+	return (0);
 }
 
 int	main(void)
 {
-	printf("%d\n", ft_iterative_power(-2, 3));
-	printf("%d\n", ft_iterative_power(0, 2));
-	printf("%d\n", ft_iterative_power(3, 0));
-	printf("%d\n", ft_iterative_power(13, 1));
-	printf("%d\n", ft_iterative_power(4, 2));
+	printf("%d\n", ft_sqrt(-1));
+	printf("%d\n", ft_sqrt(0));
+	printf("%d\n", ft_sqrt(1));
+	printf("%d\n", ft_sqrt(3));
+	printf("%d\n", ft_sqrt(4));
+	printf("%d\n", ft_sqrt(1073741824));
+	printf("%d\n", ft_sqrt(1073807361));
+	printf("%d\n", ft_sqrt(2147483648));
 	return (0);
 }
