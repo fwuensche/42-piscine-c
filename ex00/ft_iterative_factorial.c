@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/30 23:27:24 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 23:45:22 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:54:47 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,4 @@ int	ft_iterative_factorial(int nb)
 		i++;
 	}
 	return (response);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_iterative_factorial(-1));
-	printf("%d\n", ft_iterative_factorial(0));
-	printf("%d\n", ft_iterative_factorial(3));
-	return (0);
 }

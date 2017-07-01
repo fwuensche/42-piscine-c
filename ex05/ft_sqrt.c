@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 10:56:52 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 13:23:30 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:55:14 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,5 @@ int	ft_sqrt(int nb)
 			return (i);
 		i++;
 	}
-	return (0);
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_sqrt(-1));
-	printf("%d\n", ft_sqrt(0));
-	printf("%d\n", ft_sqrt(1));
-	printf("%d\n", ft_sqrt(3));
-	printf("%d\n", ft_sqrt(4));
-	printf("%d\n", ft_sqrt(1073741824));
-	printf("%d\n", ft_sqrt(1073807361));
-	printf("%d\n", ft_sqrt(2147483648));
 	return (0);
 }

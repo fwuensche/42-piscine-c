@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 10:33:01 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 10:56:21 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:54:59 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,4 @@ int	ft_fibonacci(int index)
 	if (index == 1)
 		return (1);
 	return (ft_fibonacci(index - 1) + ft_fibonacci(index - 2));
-}
-
-int	main(void)
-{
-	printf("%d\n", ft_fibonacci(0));
-	printf("%d\n", ft_fibonacci(1));
-	printf("%d\n", ft_fibonacci(2));
-	printf("%d\n", ft_fibonacci(3));
-	printf("%d\n", ft_fibonacci(4));
-	printf("%d\n", ft_fibonacci(5));
-	return (0);
 }

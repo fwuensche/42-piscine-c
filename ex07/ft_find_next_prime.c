@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 12:41:01 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 13:18:36 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:55:45 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,4 @@ int	ft_find_next_prime(int nb)
 		nb += 2;
 	}
 	return (-1);
-}
-
-int	main(void)
-{
-	printf("%d %d\n", -1, ft_find_next_prime(-1));
-	printf("%d %d\n", 6, ft_find_next_prime(6));
-	return (0);
 }
