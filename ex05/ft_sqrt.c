@@ -6,11 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 10:56:52 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 11:27:03 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:23:30 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
 	int i;
 

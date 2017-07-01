@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 11:28:12 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 11:40:38 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:23:43 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_is_prime(int nb)
 	return (1);
 }
 
-int main(void)
+int	main(void)
 {
 	printf("%d %d\n", -1, ft_is_prime(-1));
 	printf("%d %d\n", 0, ft_is_prime(0));

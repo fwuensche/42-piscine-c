@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 00:48:57 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 10:22:12 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 13:23:19 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_iterative_power(int nb, int power)
 		response = response * nb;
 		power--;
 	}
-	return response;
+	return (response);
 }
 
 int	main(void)
