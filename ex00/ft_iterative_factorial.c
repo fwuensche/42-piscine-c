@@ -6,17 +6,27 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/30 23:27:24 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/06/30 23:39:52 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/06/30 23:45:22 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iterative_factorial(int nb)
 {
-	if (nb < 0)
+	int i;
+	int response;
+
+	if (nb < 0 || nb >= 13)
 		return (0);
 	if (nb == 0)
 		return (1);
-	return (nb * ft_iterative_factorial(nb - 1));
+	i = 1;
+	response = 1;
+	while (i <= nb)
+	{
+		response *= i;
+		i++;
+	}
+	return (response);
 }
 
 int	main(void)
