@@ -6,11 +6,11 @@
 /*   By: mferech <mferech@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 18:30:54 by mferech           #+#    #+#             */
-/*   Updated: 2017/07/01 19:13:51 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/01 19:18:26 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+void	ft_putchar(char c);
 
 void	rush(int x, int y)
 {
