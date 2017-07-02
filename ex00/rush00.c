@@ -3,48 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mferech <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mferech <mferech@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 18:30:54 by mferech           #+#    #+#             */
-/*   Updated: 2017/07/01 18:30:59 by mferech          ###   ########.fr       */
+/*   Updated: 2017/07/01 19:13:51 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_putchar(char c);
+int		ft_putchar(char c);
 
-void rush(x, y)
+void	rush(int x, int y)
 {
-  int x_it;
-  int y_it;
+	int w;
+	int h;
 
-  y_it = 0;
-  while (y_it < y)
-  {
-    x_it = 0;
-    while (x_it < x)
-    {
-      if ((x_it == 0 && y_it == 0) ||
-          (x_it == 0 && y_it == y -1 ) ||
-          (x_it == x - 1 && y_it == 0) ||
-          (x_it == x - 1 && y_it == y - 1))
-      {
-        ft_putchar('o');
-      }
-      else if (x_it == 0 || x_it == x -1)
-      {
-        ft_putchar('|');
-      }
-      else if (y_it == 0 || y_it == x -1)
-      {
-        ft_putchar('-');
-      }
-      else
-      {
-        ft_putchar(' ');
-      }
-      x_it++;
-    }
-    ft_putchar('\n');
-    y_it++;
-  }
+	h = 0;
+	while (h < y)
+	{
+		w = 0;
+		while (w < x)
+		{
+			if ((w == 0 && h == 0) || (w == 0 && h == y - 1) ||
+			(w == x - 1 && h == 0) || (w == x - 1 && h == y - 1))
+				ft_putchar('o');
+			else if (w == 0 || w == x - 1)
+				ft_putchar('|');
+			else if (h == 0 || h == x - 1)
+				ft_putchar('-');
+			else
+				ft_putchar(' ');
+			w++;
+		}
+		ft_putchar('\n');
+		h++;
+	}
 }
