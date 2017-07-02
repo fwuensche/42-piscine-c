@@ -1,14 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush00.c                                           :+:      :+:    :+:   */
+/*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mferech <mferech@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 18:30:54 by mferech           #+#    #+#             */
-/*   Updated: 2017/07/01 19:18:26 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/01 18:19:08 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/01 19:24:33 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_putchar(char c);
 
@@ -17,24 +19,25 @@ void	rush(int x, int y)
 	int w;
 	int h;
 
-	h = 0;
-	while (h < y)
+	w = x;
+	h = y;
+	y = 1;
+	while (y <= h)
 	{
-		w = 0;
-		while (w < x)
+		x = 1;
+		while (x <= w)
 		{
-			if ((w == 0 && h == 0) || (w == 0 && h == y - 1) ||
-			(w == x - 1 && h == 0) || (w == x - 1 && h == y - 1))
-				ft_putchar('o');
-			else if (w == 0 || w == x - 1)
-				ft_putchar('|');
-			else if (h == 0 || h == x - 1)
-				ft_putchar('-');
-			else
+			if ((x == 1 && y == 1) || (x == 1 && y == h))
+				ft_putchar('A');
+			else if (x > 1 && x < w && y > 1 && y < h)
 				ft_putchar(' ');
-			w++;
+			else if ((x == w && y == 1) || (x == w && y == h))
+				ft_putchar('C');
+			else
+				ft_putchar('B');
+			x++;
 		}
 		ft_putchar('\n');
-		h++;
+		y++;
 	}
 }
