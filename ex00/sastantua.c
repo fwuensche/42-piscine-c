@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 21:58:20 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/02 21:03:49 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/02 21:17:48 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putchar(c)
 
 int		ft_lines_to_skip(stage)
 {
-	return (((stage - 1) % 2 + (stage - 1) / 2 + 1));
+	return (((stage) % 2 + (stage) / 2 + 1));
 }
 
 int		ft_last_line_number(size)
@@ -50,13 +50,20 @@ void	sastantua(int size)
 {
 	int i;
 	int base_size;
+	int stage;
 
+	stage = 1;
 	base_size = 2 + 1 + (size - 1) * 2;
 	if (size > 0)
 	{
 		i = 0;
 		while (i <= ft_last_line_number(size))
 		{
+			if (i == ft_last_line_number(stage))
+			{
+				i = i + ft_lines_to_skip(stage);
+				stage++;
+			}
 			ft_print_line(i, ft_last_line_number(size));
 			i++;
 		}
@@ -65,6 +72,6 @@ void	sastantua(int size)
 
 int		main(void)
 {
-	sastantua(2);
+	sastantua(4);
 	return (0);
 }
