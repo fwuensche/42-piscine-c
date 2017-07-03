@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 21:58:20 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/02 20:44:38 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/02 21:03:49 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,17 @@ void	ft_putchar(c)
 	write(1, &c, 1);
 }
 
+int		ft_lines_to_skip(stage)
+{
+	return (((stage - 1) % 2 + (stage - 1) / 2 + 1));
+}
+
 int		ft_last_line_number(size)
 {
-	int skip;
-
-	skip = ((size - 1) % 2 + (size - 1) / 2 + 1);
 	if (size == 1)
-		return (0);
+		return (3);
 	else
-		return (size + 2 + skip + ft_last_line_number(size - 1));
+		return (size + 2 + ft_lines_to_skip(size) + ft_last_line_number(size - 1));
 }
 
 void	ft_print_line(int n, int last_line_number)
@@ -34,18 +36,12 @@ void	ft_print_line(int n, int last_line_number)
 	int stars;
 
 	offset = (3 + last_line_number * 2) / 2 - n - 1;
-	while (offset)
-	{
+	while (offset--)
 		ft_putchar(' ');
-		offset--;
-	}
 	ft_putchar('/');
 	stars = 1 + n * 2;
-	while (stars)
-	{
+	while (stars--)
 		ft_putchar('*');
-		stars--;
-	}
 	ft_putchar('\\');
 	ft_putchar('\n');
 }
@@ -59,9 +55,9 @@ void	sastantua(int size)
 	if (size > 0)
 	{
 		i = 0;
-		while (i < ft_last_line_number(size))
+		while (i <= ft_last_line_number(size))
 		{
-			ft_print_line(i, base_size);
+			ft_print_line(i, ft_last_line_number(size));
 			i++;
 		}
 	}
@@ -69,6 +65,6 @@ void	sastantua(int size)
 
 int		main(void)
 {
-	sastantua(10);
+	sastantua(2);
 	return (0);
 }
