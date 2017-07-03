@@ -6,11 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 15:58:00 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 16:03:14 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 16:12:48 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcpy(char *dest, char *src)
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 	int	j;
