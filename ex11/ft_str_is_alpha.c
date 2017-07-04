@@ -6,14 +6,12 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 21:04:22 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 21:08:56 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 21:10:03 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
-	int retour;
-
 	while (*str != '\0')
 	{
 		if (*str >= 'a' && *str <= 'z')
