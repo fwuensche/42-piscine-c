@@ -6,7 +6,7 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 21:28:33 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 21:29:34 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 21:33:00 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_str_is_printable(char *str)
 		return (1);
 	while (*str != '\0')
 	{
-		if (*str >= 0 && *str <= 127)
+		if (*str >= 32 && *str <= 126)
 			str++;
 		else
 			return (0);
