@@ -6,24 +6,26 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 21:33:50 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 21:50:57 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 21:55:55 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcat(char *dest, char *src)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (*dest != '\0')
+	j = 0;
+	while (dest[i] != '\0')
 	{
 		i++;
 		dest++;
 	}
-	while (*src != '\0')
+	while (src[j] != '\0')
 	{
-		dest[i] = *src;
-		src++;
+		dest[i] = src[j];
+		j++;
 		i++;
 	}
 	dest[i] = '\0';
