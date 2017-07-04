@@ -6,13 +6,13 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 19:40:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 20:19:34 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 20:21:17 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
 	while ((s1[i] != '\0' && s2[i] != '\0') && i < n)
