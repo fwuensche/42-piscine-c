@@ -6,7 +6,7 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 21:33:50 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 22:00:58 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 22:01:24 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strcat(char *dest, char *src)
 	int i;
 	int j;
 
-	j = 0;
+	i = 0;
 	j = 0;
 	while (dest[i] != '\0')
 		i++;
