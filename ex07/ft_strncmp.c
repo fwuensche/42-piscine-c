@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/03 19:33:55 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 19:39:56 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/03 19:40:19 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/03 20:19:34 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	while (*s1 != '\0' && *s2 != '\0')
+	int i;
+
+	i = 0;
+	while ((s1[i] != '\0' && s2[i] != '\0') && i < n)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	if (*s1 != '\0')
-		return (*s1);
-	if (*s2 != '\0')
-		return (-*s2);
+	if (i == n)
+		return (0);
+	if (s1[i] != '\0')
+		return (s1[i]);
+	if (s2[i] != '\0')
+		return (-s2[i]);
 	return (0);
 }
