@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 17:08:00 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 18:18:50 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 21:24:57 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
