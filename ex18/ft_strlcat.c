@@ -6,7 +6,7 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 22:10:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 22:49:49 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 22:50:58 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	while (src[i] != '\0')
 		i++;
 	src_size = i;
-	while (dest[dst_size] != '\0' && space_left-- != 0)
+	while (dst[dst_size] != '\0' && space_left-- != 0)
 		dst_size++;
 	space_left = size - dst_size;
 	if (space_left == 0)
@@ -32,6 +32,6 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	i = 0;
 	j = dst_size;
 	while (src[i] != 0 && space_left-- > 1)
-		dest[j++] = src[i++];
+		dst[j++] = src[i++];
 	return (src_size + dst_size);
 }
