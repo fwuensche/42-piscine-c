@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 10:26:24 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/04 10:30:31 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/04 10:55:37 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		main(int argc, char **argv)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while (i < argc)
 	{
 		ft_putstr(argv[i]);
