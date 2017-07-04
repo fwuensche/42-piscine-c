@@ -6,7 +6,7 @@
 /*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/03 17:08:00 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/03 17:34:25 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/03 17:51:12 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char  *ft_strstr(char *str, char *to_find)
 			str++;
 			query++;
 		}
-		if (*query != '\0')
+		if (*(query - 1) == '\0')
 			return (result);
 		str = result + 1;
 	}
