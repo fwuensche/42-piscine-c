@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 10:17:29 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/04 10:25:04 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/04 18:10:23 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ void	ft_putstr(char *str)
 
 int		main(int argc, char **argv)
 {
-	ft_putstr(argv[0]);
-	ft_putchar('\n');
+	if (argc > 0)
+	{
+		ft_putstr(argv[0]);
+		ft_putchar('\n');
+	}
 }
