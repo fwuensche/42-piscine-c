@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 10:31:15 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/04 10:56:43 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/05 21:52:28 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int		main(int argc, char **argv)
 		ft_putchar('\n');
 		i--;
 	}
+	return (0);
 }
