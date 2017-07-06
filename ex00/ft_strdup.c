@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 12:19:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/05 22:02:53 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/05 22:19:11 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ char	*ft_strdup(char *src)
 	char *duplicate;
 
 	duplicate = (char*)malloc(sizeof(*duplicate) * (ft_strlen(src) + 1));
-	duplicate = ft_strcpy(duplicate, src)
+	duplicate = ft_strcpy(duplicate, src);
 	return (duplicate);
 }
