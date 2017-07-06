@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 20:54:51 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/05 21:28:55 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/05 22:17:54 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*ft_strcat(char *dest, char *src)
 
 char	*ft_concat_params(int argc, char **argv)
 {
-	char *lovely_args;
+	char *args;
 	int i;
 	int mem;
 
@@ -54,16 +54,16 @@ char	*ft_concat_params(int argc, char **argv)
 	mem = 0;
 	while (i < argc)
 	{
-		mem += ft_strlen(argc) + 1;
+		mem += ft_strlen(argv[i]) + 1;
 		i++;
 	}
 	mem--;
-	*lovely_args = (char*)malloc(sizeof(lovely_args) * mem);
-	i = 0;
-	while (i < argc)
+	args = (char*)malloc(sizeof(char) * mem);
+	i = 1;
+	while (i < argc - 1)
 	{
-		ft_strcat(char *dest, char *src)
+		ft_strcat(argv[1], argv[i + 1]);
 		i++;
 	}
-	return (lovely_args);
+	return (args);
 }
