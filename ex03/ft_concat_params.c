@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 20:54:51 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/05 22:56:33 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/05 23:02:03 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,12 @@ char	*ft_concat_params(int argc, char **argv)
 			j++;
 			k++;
 		}
-		i++;
-		if (i == argc)
+		if (i == argc - 1)
 			args[k] = '\0';
 		else
 			args[k] = '\n';
+		k++;
+		i++;
 	}
 	return (args);
 }
