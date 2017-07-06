@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 12:19:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/05 20:15:08 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/05 22:02:53 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,6 @@ char	*ft_strdup(char *src)
 	char *duplicate;
 
 	duplicate = (char*)malloc(sizeof(*duplicate) * (ft_strlen(src) + 1));
-	return (ft_strcpy(duplicate, src));
+	duplicate = ft_strcpy(duplicate, src)
+	return (duplicate);
 }
