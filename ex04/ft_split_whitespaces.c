@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 12:58:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 22:36:44 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/06 22:48:47 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,10 +95,6 @@ char	**ft_split_whitespaces(char *str)
 			arr[i][j++] = *str++;
 	}
 	if (word_count == 0)
-	{
-		arr[0] = (char*)malloc(sizeof(char) * 1);
-		arr[0][0] = '\0';
-		arr[1] = 0;
-	}
+		arr[0] = 0;
 	return (arr);
 }
