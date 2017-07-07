@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 12:58:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 22:48:47 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/06 23:09:15 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,27 @@ int		ft_is_whitespace(char c)
 
 int		ft_word_count(char *str)
 {
-	int word_count;
 	int i;
+	int chr;
 
 	i = 0;
-	word_count = 0;
-	while (str[i])
+	chr = 0;
+	while (*str)
 	{
-		while (ft_is_whitespace(str[i]) && str[i] != '\0')
-			i++;
-		while (!(ft_is_whitespace(str[i])) && str[i] != '\0')
-			i++;
-		while (ft_is_whitespace(str[i]) && str[i] != '\0')
-			i++;
-		word_count++;
+		if (ft_is_whitespace(*str))
+		{
+			str++;
+			chr = 0;
+		}
+		else
+		{
+			if (chr == 0)
+				i++;
+			chr = 1;
+			str++;
+		}
 	}
-	return (word_count);
+	return (i);
 }
 
 char	**ft_allocate_memory(char *str, int word_count, int i, int j)
@@ -94,7 +99,5 @@ char	**ft_split_whitespaces(char *str)
 		else
 			arr[i][j++] = *str++;
 	}
-	if (word_count == 0)
-		arr[0] = 0;
 	return (arr);
 }
