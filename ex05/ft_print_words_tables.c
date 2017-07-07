@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 12:58:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 22:22:40 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/06 22:23:52 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_print_words_tables(char **tab)
 			ft_putchar(tab[i][j]);
 			j++;
 		}
-		ft_putchar("\n");
+		ft_putchar('\n');
 		i++;
 	}
 }
