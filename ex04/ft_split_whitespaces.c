@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 12:58:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 14:37:40 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/06 18:10:40 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,13 +54,44 @@ char	**ft_split_whitespaces(char *str)
 	int j;
 	i = 0;
 	j = 0;
-
 	char **arr;
-	arr = (char**)malloc(sizeof(char*) * ft_word_count(str));
-	arr[0] = (char*)malloc(sizeof(char) * 6);
-	arr[1] = (char*)malloc(sizeof(char) * 6);
-	arr[2] = (char*)malloc(sizeof(char) * 6);
-	arr[3] = (char*)malloc(sizeof(char) * 1);
+
+	// allocate memory to main array
+	arr = (char**)malloc(sizeof(char*) * (ft_word_count(str) + 1));i = 0;
+
+	// allocate memory to each word
+	str_it = 0;
+	i = 0;
+	j = 0;
+	while (str[str_it] != '\0')
+	{
+		if (str[str_it] == ' ' || str[str_it] == '\n' || str[str_it] == '\t')
+		{
+			arr[i] = (char*)malloc(sizeof(char) * (j + 1));
+			i++;
+			j = 0;
+		}
+		else
+		{
+			j++;
+		}
+		// last word
+		if (str[str_it + 1] == '\0')
+		{
+			arr[i] = (char*)malloc(sizeof(char) * (j + 1));
+		}
+		str_it++;
+	}
+	i++;
+	arr[i] = 0;
+
+	// arr = (char**)malloc(sizeof(char*) * (ft_word_count(str) + 1));
+	// arr[0] = (char*)malloc(sizeof(char) * 7);
+	// arr[1] = (char*)malloc(sizeof(char) * 7);
+	// arr[2] = (char*)malloc(sizeof(char) * 7);
+	// arr[3] = 0;
+	i = 0;
+	j = 0;
 	str_it = 0;
 	while (str[str_it] != '\0')
 	{
@@ -80,23 +111,18 @@ char	**ft_split_whitespaces(char *str)
 		}
 		str_it++;
 	}
-	i++;
-	arr[i][0] = '\0';
 	return (arr);
 }
 
 int main()
 {
-	char name[] = "Caioza Flavio Gaucho";
+	char name[] = "Caio Flavio Gaucho\nCasa Hello\tWorld";
 	char **ret;
 	int i;
 
 	ret = ft_split_whitespaces(name);
 	i = 0;
-	while (i < 4)
-	{
-		printf("%s\n", ret[i]);
-		i++;
-	}
+	while (ret[i])
+		printf("%s\n", ret[i++]);
 	return (0);
 }
