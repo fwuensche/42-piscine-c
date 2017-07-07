@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 12:58:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 22:23:52 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/06 22:24:35 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_print_words_tables(char **tab)
 	while (tab[i])
 	{
 		j = 0;
-		while(tab[i][j])
+		while (tab[i][j])
 		{
 			ft_putchar(tab[i][j]);
 			j++;
