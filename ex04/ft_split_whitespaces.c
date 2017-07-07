@@ -6,12 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 12:58:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 19:11:36 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/06 19:12:22 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 int		ft_is_whitespace(char c)
 {
