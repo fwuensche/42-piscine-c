@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/06 21:45:21 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/06 22:09:39 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/07 16:58:00 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_rot42(char *str)
 			*str = (((*str - 'A' + 42) % 26) + 'A');
 		str++;
 	}
-	return ret;
+	return (ret);
 }
