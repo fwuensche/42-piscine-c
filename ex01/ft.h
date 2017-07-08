@@ -6,12 +6,12 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/07 22:16:58 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/07 22:47:41 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/07 22:53:49 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FT_H__
-# define __FT_H__
+#ifndef FT_H
+# define FT_H
 
 void	ft_putchar(char c);
 void	ft_swap(int *a, int *b);
