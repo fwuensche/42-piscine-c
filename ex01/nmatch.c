@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 15:03:39 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/09 16:03:19 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/09 16:11:08 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ int		nmatch(char *s1, char *s2)
 			return (0);
 	}
 	if (*s2 == '*')
-	{
 		return (nmatch(s1, s2 + 1) + nmatch(s1 + 1, s2));
-	}
 	if (*s1 == *s2)
 		return (nmatch(++s1, ++s2));
 	if (*s1 != *s2)
