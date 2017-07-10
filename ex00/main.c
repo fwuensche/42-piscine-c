@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/09 16:16:12 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/09 22:21:40 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/09 23:13:24 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,15 +57,16 @@ int		solve_sudoku(char grid[9][9], int i, int j)
 
 	if (grid[i][j] != '0') {
 		if (j == 8) {
-			if (solve_sudoku(grid, i+1, 0)) return 1;
+			if (solve_sudoku(grid, i + 1, 0)) return 1;
 		} else {
-			if (solve_sudoku(grid, i, j+1)) return 1;
+			if (solve_sudoku(grid, i, j + 1)) return 1;
 		}
 		return (0);
 	}
 
 	n = '1';
-	while (n <= '9') {
+	while (n <= '9')
+	{
 		if(is_valid(n, grid, i, j)) {
 			grid[i][j] = n;
 			if (j == 8) {
@@ -75,34 +76,9 @@ int		solve_sudoku(char grid[9][9], int i, int j)
 				if (solve_sudoku(grid, i, j + 1))
 					return (1);
 			}
-			grid[i][j] = 0;
+			grid[i][j] = '0';
 		}
 		n++;
-	}
-
-
-	if (grid[i][j] == '0')
-	{
-		n = '1';
-		while (n <= '9')
-		{
-			if (is_valid(n, grid, i, j))
-			{
-				grid[i][j] = n;
-				if (j == 8)
-				{
-					if (solve_sudoku(grid, i + 1, 0))
-						return (1);
-				}
-				else
-				{
-					if (solve_sudoku(grid, i, j + 1))
-						return (1);
-				}
-				grid[i][j] = 0;
-			}
-			n++;
-		}
 	}
 	return (0);
 }
