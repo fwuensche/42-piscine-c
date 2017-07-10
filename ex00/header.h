@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/09 16:16:12 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/09 23:30:30 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/09 23:15:21 by fwuensch          #+#    #+#             */
+/*   Updated: 2017/07/09 23:19:52 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#ifndef HEADER_H
+# define HEADER_H
 
-int		main(int argc, char **argv)
-{
-	char	grid[9][9];
+# include <unistd.h>
 
-	if (!(input_is_valid(argc, argv)))
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	build_table(argv + 1, grid);
-	solve_sudoku(grid, 0, 0);
-	print_table(grid);
-	return (0);
-}
+int		is_valid(char number, char grid[9][9], int row, int column);
+int		solve_sudoku(char grid[9][9], int i, int j);
+void	build_table(char **argv, char grid[9][9]);
+int		ft_strlen(char *str);
+int		line_is_valid(char *str);
+int		input_is_valid(int argc, char **argv);
+void	print_table(char grid[9][9]);
+
+#endif
