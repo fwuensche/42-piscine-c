@@ -6,11 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 19:18:44 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/11 19:23:38 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/11 19:38:54 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_count_if(char **tab, int(*f)(char))
+int		ft_count_if(char **tab, int (*f)(char))
 {
 	int i;
 	int n;
@@ -25,5 +25,5 @@ int		ft_count_if(char **tab, int(*f)(char))
 		}
 		i++;
 	}
-	return n;
+	return (n);
 }
