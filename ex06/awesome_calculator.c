@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do-op.c                                            :+:      :+:    :+:   */
+/*   awesome_calculator.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 19:44:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/11 20:55:37 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/11 23:08:49 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "awesome_calculator.h"
+#include "structs.h"
 
 int		ft_atoi(char *str)
 {
@@ -69,24 +70,43 @@ void	ft_putnbr(int nb)
 
 int		ft_calculate(int n1, char op, int n2)
 {
-	if (op == '+')
-		return (n1 + n2);
-	if (op == '-')
-		return (n1 - n2);
-	if (op == '/')
-		return (n1 / n2);
-	if (op == '*')
-		return (n1 * n2);
-	if (op == '%')
-		return (n1 % n2);
+	int i;
+
+	i = 0;
+	if (op == '+' || op == '-' || op == '/' || op == '*' || op == '%')
+	{
+		while (i < 5)
+		{
+			if (g_opstable[i].operation == op)
+				return (g_opstable[i].func(n1, n2));
+			i++;
+		}
+	}
 	return (0);
 }
 
 int		main(int argc, char **argv)
 {
+	int n1;
+	int n2;
+	char *op;
+
 	if (argc != 4)
 		return (0);
-	ft_putnbr(ft_calculate(ft_atoi(argv[1]), *argv[2], ft_atoi(argv[3])));
+	n1 = ft_atoi(argv[1]);
+	n2 = ft_atoi(argv[3]);
+	op = argv[2];
+	if (n2 == 0 && *op == '/')
+	{
+		write(1, "Stop : division by zero\n", 24);
+		return (0);
+	}
+	if (n2 == 0 && *op == '%')
+	{
+		write(1, "Stop : modulo by zero\n", 22);
+		return (0);
+	}
+	ft_putnbr(ft_calculate(n1, *argv[2], n2));
 	ft_putchar('\n');
 	return (0);
 }
