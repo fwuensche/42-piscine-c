@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   awesome_calculator.c                               :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 19:44:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/11 23:16:02 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/11 23:26:00 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "awesome_calculator.h"
+#include "headers.h"
 #include "structs.h"
 
 int		ft_atoi(char *str)

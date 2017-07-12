@@ -6,15 +6,15 @@
 #    By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 19:39:04 by fwuensch          #+#    #+#              #
-#    Updated: 2017/07/11 23:17:52 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/11 23:25:06 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-PROGRAM = awesome_calculator
+PROGRAM = do_op
 
 OUT = do-op
 
-SRC = awesome_calculator.c awesome_operations.c
+SRC = main.c operations.c
 
 all: $(PROGRAM)
 

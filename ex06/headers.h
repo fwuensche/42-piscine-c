@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   awesome_calculator.h                               :+:      :+:    :+:   */
+/*   headers.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 20:59:28 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/11 22:56:16 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/11 23:26:12 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AWESOME_CALCULATOR_H
-# define AWESOME_CALCULATOR_H
+#ifndef HEADERS_H
+# define HEADERS_H
 
 # include <unistd.h>
 
