@@ -6,14 +6,12 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 22:56:31 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/11 22:56:50 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/11 23:18:27 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRUCTS_H
 # define STRUCTS_H
-
-typedef	int (*t_function)(int, int);
 
 typedef struct	s_opp
 {

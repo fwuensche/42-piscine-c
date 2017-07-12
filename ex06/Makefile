@@ -6,7 +6,7 @@
 #    By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/11 19:39:04 by fwuensch          #+#    #+#              #
-#    Updated: 2017/07/11 23:14:47 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/11 23:17:52 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,3 +23,8 @@ $(PROGRAM):
 
 clean:
 	/bin/rm -f $(OUT)
+
+fclean: clean
+	/bin/rm -f $(OUT)
+
+re: fclean all

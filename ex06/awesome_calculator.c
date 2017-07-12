@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/11 19:44:26 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/11 23:08:49 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/11 23:16:02 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,9 +87,9 @@ int		ft_calculate(int n1, char op, int n2)
 
 int		main(int argc, char **argv)
 {
-	int n1;
-	int n2;
-	char *op;
+	int		n1;
+	int		n2;
+	char	*op;
 
 	if (argc != 4)
 		return (0);
