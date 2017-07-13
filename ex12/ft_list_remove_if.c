@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 20:59:23 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 23:41:01 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 23:42:08 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,28 @@
 void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
 	t_list	*last;
-	t_list	*current;
-	t_list	*tmp;
+	t_list	*curr;
+	t_list	*temp;
 
 	last = NULL;
-	current = *begin_list;
-	tmp = NULL;
-	while (current)
+	curr = *begin_list;
+	temp = NULL;
+	while (curr)
 	{
-		if ((*cmp)(current->data, data_ref) == 0)
+		if ((*cmp)(curr->data, data_ref) == 0)
 		{
-			if (current == *begin_list)
-				*begin_list = current->next;
+			if (curr == *begin_list)
+				*begin_list = curr->next;
 			else
-				last->next = current->next;
-			tmp = current;
-			current = current->next;
-			free(tmp);
+				last->next = curr->next;
+			temp = curr;
+			curr = curr->next;
+			free(temp);
 		}
 		else
 		{
-			last = current;
-			current = current->next;
+			last = curr;
+			curr = curr->next;
 		}
 	}
 }
