@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 16:18:28 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 17:06:43 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 17:25:32 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@ typedef struct		s_list
 	struct s_list	*next;
 	void			*data;
 }					t_list;
+
+t_list			*ft_create_elem(void *data);
 
 #endif
