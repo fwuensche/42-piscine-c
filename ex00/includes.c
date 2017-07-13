@@ -6,11 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 14:05:05 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/13 14:25:09 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/13 14:33:33 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes.h"
+#include "headers.h"
 
 int		is_input_valid(int argc)
 {

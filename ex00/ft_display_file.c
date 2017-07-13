@@ -6,15 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 14:09:39 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/13 14:20:25 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/13 14:34:09 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_display_file.h"
-#include "includes.h"
-#include <fcntl.h>
-#include <unistd.h>
-#define BUF_SIZE 4096
+#include "headers.h"
 
 int	ft_display_file(char *filename)
 {

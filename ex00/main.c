@@ -6,12 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 14:00:51 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/13 14:22:16 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/13 14:33:42 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes.h"
-#include "ft_display_file.h"
+#include "headers.h"
 
 int		main(int argc, char **argv)
 {
