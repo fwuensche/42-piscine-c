@@ -6,14 +6,14 @@
 #    By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/13 13:56:15 by fwuensch          #+#    #+#              #
-#    Updated: 2017/07/13 14:34:52 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/13 14:56:41 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ft_display_file
 FLAG = -Wall -Wextra -Werror
-SRCS = main.c ft_display_file.c includes.c
-OUTS = main.o ft_display_file.o includes.o
+SRCS = ft_display_file.c utils.c
+OUTS = ft_display_file.o utils.o
 
 all: $(NAME)
 
