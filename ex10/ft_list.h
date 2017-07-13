@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 20:13:21 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 20:23:15 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 23:38:30 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ typedef struct		s_list
 	void			*data;
 }					t_list;
 
-void				ft_list_foreach_if(t_list *begin_list, void (*f)(void *),
-						void *data_ref, int (*cmp)());
+t_list				*ft_create_elem(void *data);
 
 #endif
