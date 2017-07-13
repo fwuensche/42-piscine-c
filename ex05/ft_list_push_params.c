@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 17:45:12 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 19:09:08 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 19:10:59 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,8 @@ t_list	*ft_list_push_params(int ac, char **av)
 	int		i;
 
 	list = 0;
-	if (ac >= 2)
-	{
-		list = ft_create_elem(av[1]);
-	}
-	i = 2;
-	if (list)
-	{
-		while (i < ac)
-		{
-			ft_list_push_front(&list, av[i]);
-			i++;
-		}
-	}
+	i = 1;
+	while (i < ac)
+		ft_list_push_front(&list, av[i++]);
 	return (list);
 }
