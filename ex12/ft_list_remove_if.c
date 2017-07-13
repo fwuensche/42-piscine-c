@@ -6,17 +6,17 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 20:59:23 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 23:39:58 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 23:41:01 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-void    ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
+void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
-	t_list    *last;
-	t_list    *current;
-	t_list    *tmp;
+	t_list	*last;
+	t_list	*current;
+	t_list	*tmp;
 
 	last = NULL;
 	current = *begin_list;
