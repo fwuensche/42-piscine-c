@@ -6,14 +6,14 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 17:21:14 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 17:32:01 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 17:34:55 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_list.h"
 
-void	ft_list_push_front(t_list **begin_first, void *data)
+void	ft_list_push_front(t_list **begin_list, void *data)
 {
 	t_list *elem;
 
