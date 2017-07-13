@@ -6,9 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/12 17:33:43 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/12 17:38:56 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/12 17:39:46 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_list.h"
 
 int		ft_list_size(t_list *begin_list)
 {
