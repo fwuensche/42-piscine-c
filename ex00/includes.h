@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   headers.h                                          :+:      :+:    :+:   */
+/*   includes.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/13 14:04:05 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/13 14:52:09 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/13 20:35:52 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADERS_H
-# define HEADERS_H
+#ifndef INCLUDES_H
+# define INCLUDES_H
 
 # include <unistd.h>
 # include <fcntl.h>
