@@ -6,7 +6,7 @@
 #    By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/13 13:56:15 by fwuensch          #+#    #+#              #
-#    Updated: 2017/07/13 14:56:41 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/13 19:10:30 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ OUTS = ft_display_file.o utils.o
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) -c $(SRCS)
-	gcc $(OUTS) -o $(NAME)
+	gcc $(FLAG) $(SRCS) -o $(NAME)
 
 clean:
 	rm -f $(OUTS)
