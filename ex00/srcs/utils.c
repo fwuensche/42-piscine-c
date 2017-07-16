@@ -6,13 +6,11 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 13:31:20 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 13:33:27 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_rush.h"
-
-#include <stdio.h>
 
 int		is_valid_format(char *str, int rows, int cols)
 {
