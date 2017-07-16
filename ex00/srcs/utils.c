@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/15 23:46:32 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 13:28:16 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@
 
 int		is_valid_format(char *str)
 {
+	int row;
+	int col;
 	int rows;
 	int cols;
-	int col;
 
 	rows = count_rows(str);
 	cols = count_cols(str);
+	row = 0;
 	while (*str)
 	{
 		col = 0;
@@ -35,7 +37,13 @@ int		is_valid_format(char *str)
 			write(1, "aucune\n", 7);
 			return (0);
 		}
+		row++;
 		str++;
+	}
+	if (row < rows)
+	{
+		write(1, "aucune\n", 7);
+		return (0);
 	}
 	write(1, "Valid format\n", 13);
 	return (1);
