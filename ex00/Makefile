@@ -6,12 +6,12 @@
 #    By: mnila <manuel.nila@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/15 20:30:21 by mnila             #+#    #+#              #
-#    Updated: 2017/07/15 22:08:53 by mnila            ###   ########.fr        #
+#    Updated: 2017/07/15 22:17:59 by mnila            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-TARGET = rush-02
+TARGET = rush-2
 CFLAGS = -Wall -Werror -Wextra
 INCLUDE = -I ./include
 SRC = $(addprefix ./srcs/, $(FILES))
