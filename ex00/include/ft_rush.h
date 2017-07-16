@@ -6,15 +6,12 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:12:02 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 15:57:29 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 16:41:51 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_RUSH_H
 # define FT_RUSH_H
-
-// TODO: REMOVE
-# include <stdio.h>
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -25,10 +22,13 @@
 
 int		is_valid_format(char *str, int rows, int cols);
 void	find_rush(char *str);
-int		count_rows(char *str);
-int		count_cols(char *str);
+int		ft_ctrows(char *str);
+int		ft_ctcols(char *str);
 int		ft_same_str(char *s1, char *s2);
 
+void	ft_putchar(char c);
+void	ft_putnbr(int nb);
+void	ft_putrush(char rush, int rows, int cols, int first_match);
 char	*ft_rush00(int x, int y);
 char	*ft_rush01(int x, int y);
 char	*ft_rush02(int x, int y);
