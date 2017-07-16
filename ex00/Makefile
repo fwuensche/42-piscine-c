@@ -6,7 +6,7 @@
 #    By: mnila <manuel.nila@gmail.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/15 20:30:21 by mnila             #+#    #+#              #
-#    Updated: 2017/07/15 21:46:05 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/15 22:08:53 by mnila            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,10 @@ OBJS = $(FILES:.c=.c)
 all: $(TARGET)
 
 $(TARGET):
-	mkdir -p ./bin
-	$(CC) $(CFLAGS) $(INCLUDE) -c $(SRC)
-	$(CC) *.o -o $(TARGET)
-	mv *.o ./bin
+	@mkdir -p ./bin
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $(SRC)
+	@$(CC) *.o -o $(TARGET)
+	@mv *.o ./bin
 
 clean:
 	@rm -f *.o
