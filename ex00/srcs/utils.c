@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 13:33:27 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 14:40:28 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int		is_valid_format(char *str, int rows, int cols)
 		write(1, "aucune\n", 7);
 		return (0);
 	}
-	write(1, "Valid format\n", 13);
 	return (1);
 }
 
@@ -65,4 +64,18 @@ int		count_cols(char *str)
 		cols++;
 	}
 	return (cols);
+}
+
+int		ft_same_str(char *s1, char *s2)
+{
+	while (*s1 && *s2)
+	{
+		if (*s1 != *s2)
+			return (0);
+		s1++;
+		s2++;
+	}
+	if (*s1 || *s2)
+		return (0);
+	return (1);
 }

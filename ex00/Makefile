@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mnila <manuel.nila@gmail.com>              +#+  +:+       +#+         #
+#    By: mnila <mnila@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/15 20:30:21 by mnila             #+#    #+#              #
-#    Updated: 2017/07/15 22:17:59 by mnila            ###   ########.fr        #
+#    Updated: 2017/07/16 14:30:30 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ TARGET = rush-2
 CFLAGS = -Wall -Werror -Wextra
 INCLUDE = -I ./include
 SRC = $(addprefix ./srcs/, $(FILES))
-FILES = find_rush.c utils.c main.c
+FILES = find_rush.c utils.c main.c ft_rushes.c
 OBJS = $(FILES:.c=.c)
 
 all: $(TARGET)
