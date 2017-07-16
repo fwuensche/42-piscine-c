@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/16 13:41:57 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 15:58:10 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 16:15:01 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,42 @@
 
 char	*ft_rush00(int x, int y)
 {
-	int l;
-	int h;
-	int i;
-	char *res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	int		l;
+	int		h;
+	int		i;
+	char	*res;
 
 	i = 0;
-	l = 1;
 	h = 1;
-	res[i] = '\0';
-	while (y >= h)
+	res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	while (y >= h && (l = 1 || 1))
 	{
 		while (x >= l)
 		{
-			(((l == x) || (l == 1)) && ((h == 1) || (h == y))) ? (res[i++] = 'o') : 0;
+			(((l == x) || (l == 1)) && ((h == 1) || (h == y))) \
+				? (res[i++] = 'o') : 0;
 			(l > 1 && l < x && ((h == 1) || (h == y))) ? (res[i++] = '-') : 0;
 			(h > 1 && h < y && ((l == 1) || (l == x))) ? (res[i++] = '|') : 0;
 			(l > 1 && l < x && h > 1 && h < y) ? (res[i++] = ' ') : 0;
-			(l == x) ? (res[i++] = '\n') : 0;
-			l++;
+			(l++ == x) ? (res[i++] = '\n') : 0;
 		}
-		l = 1;
 		h++;
 	}
 	res[i] = '\0';
-	// TODO: REMOVE
-	printf("%s\n", res);
 	return (res);
 }
 
 char	*ft_rush01(int x, int y)
 {
-	int l;
-	int h;
-	int i;
-	char *res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	int		l;
+	int		h;
+	int		i;
+	char	*res;
 
 	i = 0;
-	l = 1;
 	h = 1;
-	res[i] = '\0';
-	while (y >= h)
+	res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	while (y >= h && (l = 1 || 1))
 	{
 		while (x >= l)
 		{
@@ -65,30 +60,25 @@ char	*ft_rush01(int x, int y)
 			(l > 1 && l < x && ((h == 1) || (h == y))) ? (res[i++] = '*') : 0;
 			(h > 1 && h < y && ((l == 1) || (l == x))) ? (res[i++] = '*') : 0;
 			(l > 1 && l < x && h > 1 && h < y) ? (res[i++] = ' ') : 0;
-			(l == x) ? (res[i++] = '\n') : 0;
-			l++;
+			(l++ == x) ? (res[i++] = '\n') : 0;
 		}
-		l = 1;
 		h++;
 	}
 	res[i] = '\0';
-	// TODO: REMOVE
-	printf("%s\n", res);
 	return (res);
 }
 
 char	*ft_rush02(int x, int y)
 {
-	int l;
-	int h;
-	int i;
-	char *res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	int		l;
+	int		h;
+	int		i;
+	char	*res;
 
 	i = 0;
-	l = 1;
 	h = 1;
-	res[i] = '\0';
-	while (y >= h)
+	res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	while (y >= h && (l = 1 || 1))
 	{
 		while (x >= l)
 		{
@@ -99,30 +89,25 @@ char	*ft_rush02(int x, int y)
 			(l > 1 && l < x && ((h == 1) || (h == y))) ? (res[i++] = 'B') : 0;
 			(h > 1 && h < y && ((l == 1) || (l == x))) ? (res[i++] = 'B') : 0;
 			(l > 1 && l < x && h > 1 && h < y) ? (res[i++] = ' ') : 0;
-			(l == x) ? (res[i++] = '\n') : 0;
-			l++;
+			(l++ == x) ? (res[i++] = '\n') : 0;
 		}
-		l = 1;
 		h++;
 	}
 	res[i] = '\0';
-	// TODO: REMOVE
-	printf("%s\n", res);
 	return (res);
 }
 
 char	*ft_rush03(int x, int y)
 {
-	int l;
-	int h;
-	int i;
-	char *res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	int		l;
+	int		h;
+	int		i;
+	char	*res;
 
 	i = 0;
-	l = 1;
 	h = 1;
-	res[i] = '\0';
-	while (y >= h)
+	res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	while (y >= h && (l = 1 || 1))
 	{
 		while (x >= l)
 		{
@@ -133,30 +118,25 @@ char	*ft_rush03(int x, int y)
 			(l > 1 && l < x && ((h == 1) || (h == y))) ? (res[i++] = 'B') : 0;
 			(h > 1 && h < y && ((l == 1) || (l == x))) ? (res[i++] = 'B') : 0;
 			(l > 1 && l < x && h > 1 && h < y) ? (res[i++] = ' ') : 0;
-			(l == x) ? (res[i++] = '\n') : 0;
-			l++;
+			(l++ == x) ? (res[i++] = '\n') : 0;
 		}
-		l = 1;
 		h++;
 	}
 	res[i] = '\0';
-	// TODO: REMOVE
-	printf("%s\n", res);
 	return (res);
 }
 
 char	*ft_rush04(int x, int y)
 {
-	int l;
-	int h;
-	int i;
-	char *res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	int		l;
+	int		h;
+	int		i;
+	char	*res;
 
 	i = 0;
-	l = 1;
 	h = 1;
-	res[i] = '\0';
-	while (y >= h)
+	res = (char *)malloc(sizeof(char) * (y * (x + 1) + 1));
+	while (y >= h && (l = 1 || 1))
 	{
 		while (x >= l)
 		{
@@ -167,14 +147,10 @@ char	*ft_rush04(int x, int y)
 			(l > 1 && l < x && ((h == 1) || (h == y))) ? (res[i++] = 'B') : 0;
 			(h > 1 && h < y && ((l == 1) || (l == x))) ? (res[i++] = 'B') : 0;
 			(l > 1 && l < x && h > 1 && h < y) ? (res[i++] = ' ') : 0;
-			(l == x) ? (res[i++] = '\n') : 0;
-			l++;
+			(l++ == x) ? (res[i++] = '\n') : 0;
 		}
-		l = 1;
 		h++;
 	}
 	res[i] = '\0';
-	// TODO: REMOVE
-	printf("%s\n", res);
 	return (res);
 }
