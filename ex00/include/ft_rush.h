@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:12:02 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 14:19:20 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 15:38:13 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,9 @@ int		count_cols(char *str);
 int		ft_same_str(char *s1, char *s2);
 
 char	*ft_rush00(int x, int y);
+char	*ft_rush01(int x, int y);
+// char	*ft_rush02(int x, int y);
+// char	*ft_rush03(int x, int y);
+// char	*ft_rush04(int x, int y);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:36 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 14:41:02 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 15:38:05 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ void	find_rush(char *str)
 
 	if (ft_same_str(str, ft_rush00(cols, rows)))
 		write(1, "YEAH to [rush00]\n", 17);
-	else
-		write(1, "NOPE to [rush00]\n", 17);
+	if (ft_same_str(str, ft_rush01(cols, rows)))
+		write(1, "YEAH to [rush01]\n", 17);
+	// if (ft_same_str(str, ft_rush02(cols, rows)))
+	// 	write(1, "YEAH to [rush02]\n", 17);
+	// if (ft_same_str(str, ft_rush03(cols, rows)))
+	// 	write(1, "YEAH to [rush03]\n", 17);
+	// if (ft_same_str(str, ft_rush04(cols, rows)))
+	// 	write(1, "YEAH to [rush04]\n", 17);
 }
