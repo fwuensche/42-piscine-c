@@ -6,11 +6,9 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 18:19:08 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/01 19:24:33 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/15 19:04:05 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c);
 

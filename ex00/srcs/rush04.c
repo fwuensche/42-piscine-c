@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 18:19:08 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/05 09:23:34 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/15 19:04:20 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,4 @@ void	rush(int x, int y)
 		ft_putchar('\n');
 		y++;
 	}
-}
-
-#include <string.h>
-#include <stdlib.h>
-
-int main(int argc, char **argv)
-{
-	if (argc >= 3)
-	{
-		rush(atoi(argv[1]), atoi(argv[2]));
-	}
-	return 0;
 }

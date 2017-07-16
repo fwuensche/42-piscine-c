@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mferech <mferech@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mnila <manuel.nila@gmail.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 18:30:54 by mferech           #+#    #+#             */
-/*   Updated: 2017/07/15 18:58:59 by fwuensch         ###   ########.fr       */
+/*   Created: 2017/07/01 11:24:13 by mnila             #+#    #+#             */
+/*   Updated: 2017/07/15 19:01:47 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,24 @@ void	ft_putchar(char c);
 
 void	rush(int x, int y)
 {
-	int w;
+	int l;
 	int h;
 
-	h = 0;
-	while (h < y)
+	l = 1;
+	h = 1;
+	while (y >= h)
 	{
-		w = 0;
-		while (w < x)
+		while (x >= l)
 		{
-			if ((w == 0 && h == 0) || (w == 0 && h == y - 1) ||
-			(w == x - 1 && h == 0) || (w == x - 1 && h == y - 1))
+			if (((l == x) || (l == 1)) && ((h == 1) || (h == y)))
 				ft_putchar('o');
-			else if (w == 0 || w == x - 1)
-				ft_putchar('|');
-			else if (h == 0 || h == x - 1)
-				ft_putchar('-');
-			else
-				ft_putchar(' ');
-			w++;
+			(l > 1 && l < x && ((h == 1) || (h == y))) ? ft_putchar('-') : 0;
+			(h > 1 && h < y && ((l == 1) || (l == x))) ? ft_putchar('|') : 0;
+			(l > 1 && l < x && h > 1 && h < y) ? ft_putchar(' ') : 0;
+			(l == x) ? ft_putchar('\n') : 0;
+			l++;
 		}
-		ft_putchar('\n');
+		l = 1;
 		h++;
 	}
-}
-
-int main (void)
-{
-	rush(5,6);
-	return 0;
 }
