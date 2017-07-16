@@ -6,15 +6,16 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/01 18:06:03 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/15 19:02:15 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/15 19:59:22 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 void	rush(int x, int y);
 
 int		main(int ac, char **av)
 {
 	if (ac == 3)
-		rush((int)*av[1] - 48, (int)*av[2] - 48);
+		rush(atoi(av[1]), atoi(av[2]));
 	return (0);
 }

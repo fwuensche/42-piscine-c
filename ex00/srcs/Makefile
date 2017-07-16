@@ -6,7 +6,7 @@
 #    By: fwuensch <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/15 19:04:42 by fwuensch          #+#    #+#              #
-#    Updated: 2017/07/15 19:06:51 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/15 20:00:10 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,6 @@ all:
 	gcc -Wall -Wextra -Werror main.c ft_putchar.c rush04.c -o rush-04
 
 clean:
-	rm rush-00 rush-01 rush-03 rush-04
+	rm -f rush-00 rush-01 rush-02 rush-03 rush-04
 
 re: clean all

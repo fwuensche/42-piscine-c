@@ -3,40 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mferech <mferech@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mhwangbo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/01 19:18:54 by mferech           #+#    #+#             */
-/*   Updated: 2017/07/01 19:54:32 by mferech          ###   ########.fr       */
+/*   Created: 2017/06/30 22:57:57 by mhwangbo          #+#    #+#             */
+/*   Updated: 2017/07/15 19:56:31 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+void	ft_putchar(char c);
+void	sides(int ix, int x);
+void	top(int ix, int x);
+void	bot(int ix, int x);
 
 void	rush(int x, int y)
 {
-	int x_it;
-	int y_it;
+	int ix;
+	int iy;
 
-	y_it = 0;
-	while (y_it < y)
+	if (x > 0 && y > 0)
 	{
-		x_it = 0;
-		while (x_it < x)
+		iy = 1;
+		while (iy <= y)
 		{
-			if ((y_it == 0 && x_it == 0) ||
-					(y_it == 0 && x_it == x - 1))
-				ft_putchar('A');
-			else if ((y_it == y - 1 && x_it == 0) ||
-							(y_it == y - 1 && x_it == x - 1))
-				ft_putchar('C');
-			else if ((x_it == 0 || x_it == x - 1) ||
-							(y_it == 0 || y_it == x - 1))
-				ft_putchar('B');
-			else
-				ft_putchar(' ');
-			x_it++;
+			ix = 1;
+			while (ix <= x)
+			{
+				if (iy == 1)
+					top(ix, x);
+				else if (iy == y)
+					bot(ix, x);
+				else
+					sides(ix, x);
+				ix++;
+			}
+			ft_putchar('\n');
+			iy++;
 		}
-		ft_putchar('\n');
-		y_it++;
 	}
+}
+
+void	sides(int ix, int x)
+{
+	if (ix == 1 || ix == x)
+		ft_putchar('B');
+	else
+		ft_putchar(' ');
+}
+
+void	top(int ix, int x)
+{
+	if (ix == 1 || ix == x)
+		ft_putchar('A');
+	else
+		ft_putchar('B');
+}
+
+void	bot(int ix, int x)
+{
+	if (ix == 1 || ix == x)
+		ft_putchar('C');
+	else
+		ft_putchar('B');
 }
