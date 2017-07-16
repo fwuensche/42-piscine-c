@@ -6,26 +6,24 @@
 #    By: mnila <mnila@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/07/15 20:30:21 by mnila             #+#    #+#              #
-#    Updated: 2017/07/16 16:49:55 by fwuensch         ###   ########.fr        #
+#    Updated: 2017/07/16 16:51:30 by fwuensch         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
-TARGET = rush-2
-CFLAGS = -Wall -Werror -Wextra
+NAME = rush-2
+FLAG = -Wall -Werror -Wextra
 INCLUDE = -I ./include
-SRC = $(addprefix ./srcs/, $(FILES))
-FILES = find_rush.c utils.c main.c ft_rushes.c
+SRC = $(addprefix ./srcs/, $(SRCS))
+SRCS = find_rush.c utils.c main.c ft_rushes.c
 OUTS = find_rush.o utils.o main.o ft_rushes.o
-OBJS = $(FILES:.c=.c)
+OBJS = $(SRCS:.c=.c)
 
-all: $(TARGET)
+all: $(NAME)
 
-$(TARGET):
+$(NAME):
 	@mkdir -p ./bin
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $(SRC)
-	@$(CC) $(OUTS) -o $(TARGET)
-	@mv $(OUTS) ./bin
+	@$(CC) $(FLAG) $(INCLUDE) $(SRC) -o $(NAME)
 
 clean:
 	@rm -f $(OUTS)
@@ -33,6 +31,6 @@ clean:
 
 fclean: clean
 	@rm -rf ./bin
-	@rm -f $(TARGET)
+	@rm -f $(NAME)
 
 re: fclean all
