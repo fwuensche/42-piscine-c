@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:19 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 13:28:16 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 13:31:20 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,17 @@
 
 #include <stdio.h>
 
-int		is_valid_format(char *str)
+int		is_valid_format(char *str, int rows, int cols)
 {
 	int row;
 	int col;
-	int rows;
-	int cols;
 
-	rows = count_rows(str);
-	cols = count_cols(str);
 	row = 0;
 	while (*str)
 	{
 		col = 0;
-		while (col < cols && *str)
-		{
+		while (col++ < cols && *str)
 			str++;
-			col++;
-		}
 		if (*str != '\n')
 		{
 			write(1, "aucune\n", 7);
