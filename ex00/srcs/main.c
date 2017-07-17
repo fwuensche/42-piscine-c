@@ -6,16 +6,24 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:07:27 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 16:23:21 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 18:40:35 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_rush.h"
 
-int		main(int ac, char **av)
+#define BUF 4048
+
+int		main(void)
 {
-	if (ac == 2)
-		if (is_valid_format(av[1], ft_ctrows(av[1]), ft_ctcols(av[1])))
-			find_rush(av[1]);
+	char	input[BUF + 1];
+	int		bytes;
+
+	bytes = read(0, input, BUF);
+	if (bytes == 0)
+		return (1);
+	input[bytes] = '\0';
+	if (is_valid_format(input, ft_ct_rows(input), ft_ct_cols(input)))
+		find_rush(input);
 	return (0);
 }

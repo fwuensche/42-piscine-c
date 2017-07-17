@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:36 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 16:46:12 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 17:51:04 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,27 +60,19 @@ void	find_rush(char *str)
 	int matches;
 
 	matches = 0;
-	rows = ft_ctrows(str);
-	cols = ft_ctcols(str);
+	rows = ft_ct_rows(str);
+	cols = ft_ct_cols(str);
 	if (ft_same_str(str, ft_rush00(cols, rows)))
-	{
 		ft_putrush('0', rows, cols, matches++);
-	}
 	if (ft_same_str(str, ft_rush01(cols, rows)))
-	{
 		ft_putrush('1', rows, cols, matches++);
-	}
 	if (ft_same_str(str, ft_rush02(cols, rows)))
-	{
 		ft_putrush('2', rows, cols, matches++);
-	}
 	if (ft_same_str(str, ft_rush03(cols, rows)))
-	{
 		ft_putrush('3', rows, cols, matches++);
-	}
 	if (ft_same_str(str, ft_rush04(cols, rows)))
-	{
 		ft_putrush('4', rows, cols, matches++);
-	}
+	if (matches == 0)
+		write(1, "aucune", 6);
 	write(1, "\n", 1);
 }

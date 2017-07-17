@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:12:02 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 16:41:51 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 18:39:32 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-#define VALID_CHAR(x) x == ' ' || x == 'A' || x == 'B' || x == 'C' \
-						  || x == '/' || x == '\\' || x == 'o' || x == '|' \
-							|| x == '-' || x == '*'
-
 int		is_valid_format(char *str, int rows, int cols);
 void	find_rush(char *str);
-int		ft_ctrows(char *str);
-int		ft_ctcols(char *str);
+int		ft_ct_rows(char *str);
+int		ft_ct_cols(char *str);
 int		ft_same_str(char *s1, char *s2);
 
 void	ft_putchar(char c);
