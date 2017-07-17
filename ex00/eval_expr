@@ -1,0 +1,1 @@
+set -f; echo $1 | bc
