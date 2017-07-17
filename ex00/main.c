@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/16 22:25:21 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 23:42:28 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 23:42:43 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int i)
+int		ft_putnbr(int i)
 {
 	return (i);
 }
