@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/15 20:19:36 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 17:51:04 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 20:40:52 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_putrush(char rush, int rows, int cols, int matches)
 {
 	if (matches > 0)
 		write(1, " || ", 4);
-	write(1, "[rush0", 6);
+	write(1, "[rush-0", 7);
 	write(1, &rush, 1);
 	write(1, "] [", 3);
 	ft_putnbr(cols);
