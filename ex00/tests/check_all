@@ -1,0 +1,38 @@
+cat test01
+cat test01 | ../rush-2
+echo ""
+cat test02
+cat test02 | ../rush-2
+echo ""
+cat test03
+cat test03 | ../rush-2
+echo ""
+cat test04
+cat test04 | ../rush-2
+echo ""
+cat test05
+cat test05 | ../rush-2
+echo ""
+cat test06
+cat test06 | ../rush-2
+echo ""
+cat test07
+cat test07 | ../rush-2
+echo ""
+cat test08
+cat test08 | ../rush-2
+echo ""
+cat test09
+cat test09 | ../rush-2
+echo ""
+cat test10
+cat test10 | ../rush-2
+echo ""
+cat test11
+cat test11 | ../rush-2
+echo ""
+cat test12
+cat test12 | ../rush-2
+echo ""
+cat test13
+cat test13 | ../rush-2
