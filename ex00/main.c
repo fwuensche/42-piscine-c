@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/16 22:25:21 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/16 22:38:28 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/16 23:41:19 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		main(int ac, char **av)
 	if (ac > 1)
 	{
 		ft_putnbr(eval_expr(av[1]));
-		ft_putchar(’\n’);
+		ft_putchar('\n');
 	}
 	return (0);
 }
