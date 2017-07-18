@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 15:01:05 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 15:50:15 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	free_chararr(char **map);
 void	free_intarr(int **arr);
 char	**build_map(char *str);
 void	print_solution(char *str, int size, int i, int j);
+int		is_valid_square(int **map, int i, int j, int size);
 
 char	*read_file(int fd);
 char	*realloc_and_strcat(char *s1, char *s2);
