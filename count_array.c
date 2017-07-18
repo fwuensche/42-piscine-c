@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 11:56:04 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 14:20:53 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 16:51:12 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 /*
 ** safely Returns the value at given index.
 */
-int		ft_val(int **pt_sums, int i, int j)
+
+int		val(int **pt_sums, int i, int j)
 {
 	if (i < 0 || j < 0)
 		return (0);
@@ -26,6 +27,7 @@ int		ft_val(int **pt_sums, int i, int j)
 ** Converts char** to int** containing partial sums of obstacles in cols/rows,
 ** Given rows of map.
 */
+
 int		**count_array(char **map, char obs, int cols)
 {
 	int i;
@@ -44,8 +46,8 @@ int		**count_array(char **map, char obs, int cols)
 		j = 0;
 		while (map[i][j])
 		{
-			pt_sums[i][j] = ft_val(pt_sums, i, j - 1) + ft_val(pt_sums, i - 1, j)
-				- ft_val(pt_sums, i - 1, j - 1) + (map[i][j] == obs);
+			pt_sums[i][j] = val(pt_sums, i, j - 1) + val(pt_sums, i - 1, j)
+				- val(pt_sums, i - 1, j - 1) + (map[i][j] == obs);
 			j++;
 		}
 		i++;

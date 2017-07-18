@@ -6,15 +6,15 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 15:54:41 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 16:55:14 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
 /*
- * Takes entire input as string, and solves problem.
- */
+** Takes entire input as string, and solves problem.
+*/
 
 void	do_solve(char *str)
 {
@@ -24,7 +24,7 @@ void	do_solve(char *str)
 	int		i;
 	int		j;
 
-	map = build_map(str);	// 1st line (info) is not kept in the array.
+	map = build_map(str);
 	pt_sums = count_array(map, ft_get_obstacle_char(str),
 			ft_get_lines_width(str));
 	print_int_array(pt_sums, ft_get_lines_width(str));
@@ -59,31 +59,21 @@ int		main(int argc, char **argv)
 	char	*str;
 
 	i = 1;
-	if (argc > 1)
+	while (argc > 1 && i < argc)
 	{
-		while(i < argc)
-		{
-			fd = open(argv[i], O_RDONLY);
-			str = read_file(fd);
-			if (*str && is_valid_input(str))
-			{
-				write(1, "VALID\n", 6);
-				do_solve(str);
-			}
-			else
-				ft_map_error();
-			free(str);
-			i++;
-		}
+		fd = open(argv[i++], O_RDONLY);
+		str = read_file(fd);
+		if (*str && is_valid_input(str))
+			do_solve(str);
+		else
+			ft_map_error();
+		free(str);
 	}
-	else
+	if (argc <= 1)
 	{
 		str = read_file(0);
 		if (*str && is_valid_input(str))
-		{
 			do_solve(str);
-			write(1, "VALID\n", 6);
-		}
 		else
 			ft_map_error();
 		free(str);

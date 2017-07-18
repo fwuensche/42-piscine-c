@@ -6,17 +6,14 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 15:50:15 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 16:45:04 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_H
 # define FT_H
 
-# define BUF_SIZE 10
-
-// TODO: REMOOOOOOVE
-# include <stdio.h>
+# define BUF_SIZE 4096
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -24,7 +21,7 @@
 
 int		**count_array(char **map, char obs, int size);
 int		bsq(int **pt_sums, int width, int *ri, int *rj);
-int		ft_val(int **pt_sums, int i, int j);
+int		val(int **pt_sums, int i, int j);
 void	print_int_array(int **arr, int length);
 int		is_valid_input(char *filename);
 int		ft_count_map_lines(char *str);

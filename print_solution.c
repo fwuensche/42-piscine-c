@@ -6,13 +6,11 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 16:22:42 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 15:54:31 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 16:55:29 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
-
-// add ft_putchar fxn to utils
 
 void	print_array(char **arr)
 {
