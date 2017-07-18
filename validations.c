@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:47:30 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/18 11:03:28 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 11:38:14 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ int		is_valid_input(char *str)
 	char	o;
 
 	printf("%s\n", str);
-	printf("Input says it has %d lines.\n", ft_atoi(str));
+	printf("Input says it has %d lines.\n", ft_get_number_of_lines(str));
 	printf("Input actually has %d lines.\n", ft_count_map_lines(str));
 
 	if (ft_count_map_lines(str) <= 1)
 		return (0);
 
-	if (ft_count_map_lines(str) != ft_atoi(str))
+	if (ft_count_map_lines(str) != ft_get_number_of_lines(str))
 	{
 		printf("Number of lines do not match.\n");
 		return (0);
@@ -47,5 +47,41 @@ int		is_valid_input(char *str)
 	if (!(ft_lines_have_same_width(str)))
 		return (0);
 
+	return (1);
+}
+
+int		is_first_line_valid(char *str)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (str[i] != '\n')
+		i++;
+	if (i < 4)
+		return (0);
+	else
+	{
+		while (j < i - 3)
+		{
+			if (!('0' <= str[j] && str[j] <= '9'))
+				return (0);
+			j++;
+		}
+	}
+	return (1);
+}
+
+int		is_only_empty_or_obstacle(char *str, char e, char o)
+{
+	while (*str != '\n')
+		str++;
+	while (*str)
+	{
+		if (*str != e && *str != o && *str != '\n')
+			return (0);
+		str++;
+	}
 	return (1);
 }

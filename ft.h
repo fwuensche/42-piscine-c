@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 11:22:53 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 11:32:52 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		val(int **pt_sums, int i, int j);
 // flavio
 int		is_valid_input(char *filename);
 int		ft_count_map_lines(char *str);
-int		ft_atoi(const char *str);
+int		ft_get_number_of_lines(const char *str);
 int		is_only_empty_or_obstacle(char *str, char e, char o);
 char	ft_get_empty_char(char *str);
 char	ft_get_obstacle_char(char *str);
