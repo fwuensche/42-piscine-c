@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 12:26:28 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/18 14:29:19 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ void	do_solve(char *str)
 		print_solution(str, box_size, i, j);
 	else
 		write(2, "map error\n", 10);
-	free_arrays(map, arr);
+	free_chararr(map);
+	free_intarr(pt_sums);
 }
 
 int	main(int argc, char **argv)
@@ -49,8 +50,8 @@ int	main(int argc, char **argv)
 			str = read_file(fd);
 			if (*str && is_valid_input(str))
 			{
-				// do_solve(argv[i]);
 				write(1, "VALID\n", 6);
+				do_solve(str);
 			}
 			else
 				ft_map_error();
@@ -63,8 +64,8 @@ int	main(int argc, char **argv)
 		str = read_file(0);
 		if (*str && is_valid_input(str))
 		{
+			do_solve(str);
 			write(1, "VALID\n", 6);
-			// do_solve(argv[i]);
 		}
 		else
 			ft_map_error();

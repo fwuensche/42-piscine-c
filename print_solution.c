@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_solution.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pebraun <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 16:22:42 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 12:26:19 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/18 14:48:46 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	print_solution(char *str, int size, int i, int j)
 	jmax = j + size;
 	while (i < imax)
 	{
+		j = 0;
 		while (j < jmax)
 		{
 			map[i][j] = full;

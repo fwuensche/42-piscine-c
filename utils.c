@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:44:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/18 11:39:48 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 14:48:24 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,21 @@ int		ft_lines_have_same_width(char *str)
 
 	while (*str != '\n')
 		str++;
+	str++;
 	w = ft_get_lines_width(str);
 	while (*str)
 	{
 		i = 0;
-		while (i < w && *str)
+		while (*str && i < w)
 		{
-			str++;
 			if (*str == '\n')
 				return (0);
 			i++;
+			str++;
 		}
-		str++;
 		if (*str != '\n' && *str)
 			return (0);
+		str++;
 	}
 	return (1);
 }
@@ -54,4 +55,9 @@ int		ft_lines_have_same_width(char *str)
 void	ft_map_error(void)
 {
 	write(2, "map error\n", 10);
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }

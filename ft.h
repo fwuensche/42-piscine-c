@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 11:42:24 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 14:49:15 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include <fcntl.h>
 
 int		**count_array(char **map, char obs, int size);
-int		bsq(int **pt_sums, int len);
-int		val(int **pt_sums, int i, int j);
+int		bsq(int **pt_sums, int width, int *ri, int *rj);
+int		ft_val(int **pt_sums, int i, int j);
 
 int		is_valid_input(char *filename);
 int		ft_count_map_lines(char *str);
@@ -34,6 +34,11 @@ int		ft_lines_have_same_width(char *str);
 int		is_first_line_valid(char *str);
 void	ft_map_error(void);
 int		ft_get_lines_width(char *str);
+void	ft_putchar(char c);
+void	free_chararr(char **map);
+void	free_intarr(int **arr);
+char	**build_map(char *str);
+void	print_solution(char *str, int size, int i, int j);
 
 char	*read_file(int fd);
 char	*realloc_and_strcat(char *s1, char *s2);
