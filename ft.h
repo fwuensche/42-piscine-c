@@ -6,14 +6,14 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 22:13:40 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 10:58:45 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_H
 # define FT_H
 
-# define BUF_SIZE 4096
+# define BUF_SIZE 4098
 
 // TODO: remove
 #include <stdio.h>
@@ -37,5 +37,9 @@ char	ft_get_obstacle_char(char *str);
 char	ft_get_full_char(char *str);
 int		ft_lines_have_same_width(char *str);
 int		is_first_line_valid(char *str);
+
+char	*read_file(int fd);
+char	*realloc_and_strcat(char *s1, char *s2);
+int		ft_strlen(char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:47:30 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/17 22:24:09 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 10:58:02 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 int		is_valid_input(char *filename)
 {
 	int		fd;
-	int		i;
-	char	str[BUF_SIZE + 1];
 	char	e;
 	char	o;
+	char	*str;
 
 	fd = open(filename, O_RDONLY);
-	while ((i = read(fd, str, BUF_SIZE)))
-		str[i] = '\0';
+	str = read_file(fd);
 
 	printf("%s\n", str);
 	printf("Input says it has %d lines.\n", ft_atoi(str));
