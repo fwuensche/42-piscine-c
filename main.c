@@ -30,14 +30,18 @@ void	do_solve(char *filename)
 
 int	main(int argc, char **argv)
 {
-	int i;
+	int		i;
+	int		fd;
+	char	*str;
 
 	i = 1;
 	if (argc > 1)
 	{
 		while(i < argc)
 		{
-			if (is_valid_input(argv[i]))
+			fd = open(argv[i], O_RDONLY);
+			str = read_file(fd);
+			if (is_valid_input(str))
 			{
 				printf("So, yep, it is valid.\n");
 				// do_solve(argv[i]);
@@ -45,6 +49,14 @@ int	main(int argc, char **argv)
 			i++;
 		}
 	}
-	// TODO: handle stdin if no arguments are passed
+	else
+	{
+		str = read_file(0);
+		if (is_valid_input(str))
+		{
+			printf("So, yep, it is valid.\n");
+			// do_solve(argv[i]);
+		}
+	}
 	return (0);
 }

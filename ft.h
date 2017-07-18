@@ -6,14 +6,14 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 10:58:45 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 11:05:34 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_H
 # define FT_H
 
-# define BUF_SIZE 4098
+# define BUF_SIZE 10
 
 // TODO: remove
 #include <stdio.h>
