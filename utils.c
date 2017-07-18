@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:44:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/17 22:17:16 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/17 22:34:28 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,43 +15,51 @@
 int	ft_atoi(const char *str)
 {
 	int n;
+	int digits;
+	int i;
 
+	digits = 0;
+	while (str[digits] != '\n')
+		digits++;
+	digits -= 3;
+
+	i = 1;
 	n = 0;
-	while ('0' <= *str && *str <= '9')
+	while ('0' <= *str && *str <= '9' && i <= digits)
 	{
 		n = n * 10 + *str - '0';
 		str++;
+		i++;
 	}
 	return n;
 }
 
 char	ft_get_empty_char(char *str)
 {
-	while ('0' <= *str && *str <= '9')
+	while (*str != '\n')
 		str++;
+	str--;
+	str--;
+	str--;
 	return (*str);
 }
 
 char	ft_get_obstacle_char(char *str)
 {
-	while ('0' <= *str && *str <= '9')
+	while (*str != '\n')
 		str++;
-	str++;
+	str--;
+	str--;
 	return (*str);
 }
 
 char	ft_get_full_char(char *str)
 {
-	while ('0' <= *str && *str <= '9')
+	while (*str != '\n')
 		str++;
-	str++;
-	str++;
+	str--;
 	return (*str);
 }
-
-// char	ft_get_number_of_lines(char *str)
-// {
-// }
 
 int		ft_count_map_lines(char *str)
 {
