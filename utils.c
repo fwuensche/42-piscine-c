@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:44:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/17 22:34:28 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 11:17:58 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,4 +160,9 @@ int		is_first_line_valid(char *str)
 	}
 
 	return (1);
+}
+
+void	ft_map_error(void)
+{
+	write(2, "map error\n", 10);
 }

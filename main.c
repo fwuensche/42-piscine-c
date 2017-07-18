@@ -41,22 +41,28 @@ int	main(int argc, char **argv)
 		{
 			fd = open(argv[i], O_RDONLY);
 			str = read_file(fd);
-			if (is_valid_input(str))
+			if (*str && is_valid_input(str))
 			{
 				printf("So, yep, it is valid.\n");
 				// do_solve(argv[i]);
 			}
+			else
+				ft_map_error();
+			free(str);
 			i++;
 		}
 	}
 	else
 	{
 		str = read_file(0);
-		if (is_valid_input(str))
+		if (*str && is_valid_input(str))
 		{
 			printf("So, yep, it is valid.\n");
 			// do_solve(argv[i]);
 		}
+		else
+			ft_map_error();
+		free(str);
 	}
 	return (0);
 }
