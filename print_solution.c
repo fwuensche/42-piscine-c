@@ -6,7 +6,7 @@
 /*   By: pebraun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 16:22:42 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 16:42:17 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/18 12:26:19 by pebraun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,15 @@ void	print_array(char **arr)
 	}
 }
 
-void	print_solution(char **map, int size, int i, int j)
+void	print_solution(char *str, int size, int i, int j)
 {
 	char	full;
 	int		imax;
 	int		jmax;
+	char	**map;
 
-	// get full character (utils fxn)
+	full = ft_get_full_char(str);
+	map = build_map(str);
 	imax = i + size;
 	jmax = j + size;
 	while (i < imax)
@@ -51,5 +53,6 @@ void	print_solution(char **map, int size, int i, int j)
 		}
 		i++;
 	}
-	print_array(char **map);
+	print_array(map);
+	free_chararr(map);
 }
