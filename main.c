@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 17:13:38 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/17 21:54:40 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,14 @@ int	main(int argc, char **argv)
 	{
 		while(i < argc)
 		{
-			if is_valid_input(argv[i])
-				do_solve(argv[i]);
+			if (is_valid_input(argv[i]))
+			{
+				printf("So, yep, it is valid.\n");
+				// do_solve(argv[i]);
+			}
+			i++;
 		}
 	}
-	// Don't forget to free any malloc'd arrays at the end.`
+	// TODO: handle stdin if no arguments are passed
 	return (0);
 }
