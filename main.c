@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 16:21:09 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/17 17:13:38 by pebraun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,18 @@
 
 void	do_solve(char *filename)
 {
-	// it reads a valid file into a char**
-	// it tries to solve using bsq (bsq)
-		// if unsolvable, it prints an ERROR
-		// else, it prints the solution (ft_print_solution)
+	int		box_size;
+	char	**map;
+	int		**pt_sums;
+	int		i;
+	int		j;
+
+	map = build_map(filename);	// 1st line (info) is kept in the array.
+	pt_sums = count_array(map + 1, /*obstacle char*/, ft_strlen(maps[1]));
+	if ((box_size = bsq(pt_sums, ft_strlen(maps[1]), &i, &j)))
+		print_solution(map, box_size, i, j);
+	else
+		write(2, "map error\n", 10);
 }
 
 int	main(int argc, char **argv)
@@ -33,12 +41,6 @@ int	main(int argc, char **argv)
 				do_solve(argv[i]);
 		}
 	}
-	// establish, size, empty, obstacle, and full characters
-	// Create buffer of correct size
-	// Read out line at a time, copying into char**
-	// If line is wrong length, or newline at wrong location, then ERROR
-	// IF COPYING A NOT ALLOWED CHAR, RETURN ERROR, exit program
-	//
 	// Don't forget to free any malloc'd arrays at the end.`
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: pebraun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 11:56:04 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 15:29:36 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/17 17:26:15 by pebraun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,22 @@ int		val(int **pt_sums, int i, int j)
  * Given rows of map.
  */
 
-// assuming THE ARRAY CHECKED FOR IMPROPER CHARACTERS & proper length BEFOREHAND?
-// NEED to modify to also return index of square so it could be written.
-// an int array of necessary values?
-int		**count_array(char **map, char obs, int rows)
+int		**count_array(char **map, char obs, int cols)
 {
 	int i;
 	int j;
 	int	**pt_sums;
 	int	*line;
+	int	rows;
 
+	rows = 0;
+	while (maps[rows])
+		rows++
 	pt_sums = malloc(sizeof(*pt_sums) * rows + 1);
 	i = 0;
 	while (i < rows)
 	{
-		line = malloc(sizeof(*line) * rows); //WRONG - use strlen(line) instead of rows
+		line = malloc(sizeof(*line) * cols);
 		j = 0;
 		while (map[i][j])
 		{
