@@ -43,8 +43,8 @@ int	main(int argc, char **argv)
 			str = read_file(fd);
 			if (*str && is_valid_input(str))
 			{
-				printf("So, yep, it is valid.\n");
 				// do_solve(argv[i]);
+				write(1, "VALID\n", 6);
 			}
 			else
 				ft_map_error();
@@ -57,7 +57,7 @@ int	main(int argc, char **argv)
 		str = read_file(0);
 		if (*str && is_valid_input(str))
 		{
-			printf("So, yep, it is valid.\n");
+			write(1, "VALID\n", 6);
 			// do_solve(argv[i]);
 		}
 		else
