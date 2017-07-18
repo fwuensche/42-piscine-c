@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:44:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/18 11:17:58 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 11:22:46 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,25 @@ int		is_only_empty_or_obstacle(char *str, char e, char o)
 		str++;
 	}
 	return (1);
+}
+
+int		ft_get_lines_width(char *str)
+{
+	int width;
+
+	// skip first line
+	while (*str != '\n')
+		str++;
+	str++;
+
+	width = 0;
+	// count nb of columns
+	while (*str != '\n')
+	{
+		width++;
+		str++;
+	}
+	return (width);
 }
 
 int		ft_lines_have_same_width(char *str)

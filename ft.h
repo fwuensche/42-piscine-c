@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 11:18:13 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 11:22:53 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	ft_get_full_char(char *str);
 int		ft_lines_have_same_width(char *str);
 int		is_first_line_valid(char *str);
 void	ft_map_error(void);
+int		ft_get_lines_width(char *str);
 
 char	*read_file(int fd);
 char	*realloc_and_strcat(char *s1, char *s2);
