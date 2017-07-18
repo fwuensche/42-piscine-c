@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:47:30 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/17 21:51:29 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/17 22:03:12 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ int		is_valid_input(char *filename)
 		return (0);
 
 	if (ft_count_map_lines(str) != ft_atoi(str))
+		return (0);
+
+	if (!(is_first_line_valid(str)))
 		return (0);
 
 	e = ft_get_empty_char(str);

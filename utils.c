@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:44:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/17 21:50:23 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/17 22:17:16 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,5 +120,36 @@ int		ft_lines_have_same_width(char *str)
 		}
 	}
 	printf("All lines have the same width.\n");
+	return (1);
+}
+
+int		is_first_line_valid(char *str)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (str[i] != '\n')
+		i++;
+
+	if (i < 4)
+	{
+		printf("Insufficient chars in first line.\n");
+		return (0);
+	}
+	else
+	{
+		while (j < i - 3)
+		{
+			if (!('0' <= str[j] && str[j] <= '9'))
+			{
+				printf("First arg of first line (nb of lines) is not valid.\n");
+				return (0);
+			}
+			j++;
+		}
+	}
+
 	return (1);
 }

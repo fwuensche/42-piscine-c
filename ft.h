@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 13:19:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 21:33:54 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/17 22:13:40 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char	ft_get_empty_char(char *str);
 char	ft_get_obstacle_char(char *str);
 char	ft_get_full_char(char *str);
 int		ft_lines_have_same_width(char *str);
+int		is_first_line_valid(char *str);
 
 #endif
