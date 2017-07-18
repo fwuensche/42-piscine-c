@@ -12,6 +12,7 @@
 
 NAME = bsq
 SRCS = *.c
+OUTS = *.o
 
 all: $(NAME)
 
@@ -19,7 +20,9 @@ $(NAME):
 	gcc *.c -o $(NAME)
 
 clean:
-	rm -f $(SRCS)
+	rm -f $(OUTS)
 
 fclean: clean
 	rm -f $(NAME)
+
+re: fclean all
