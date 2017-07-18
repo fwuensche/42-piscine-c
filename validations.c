@@ -6,31 +6,47 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:47:30 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/17 15:59:27 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/17 21:51:29 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int		is_valid_input(char *filename, char ***map)
+int		is_valid_input(char *filename)
 {
-	// read file
+	int		fd;
+	int		i;
+	char	str[BUF_SIZE + 1];
+	char	e;
+	char	o;
 
-	// if has only one line
-		// return 0
+	fd = open(filename, O_RDONLY);
+	while ((i = read(fd, str, BUF_SIZE)))
+		str[i] = '\0';
 
-	// get number of lines from the first line
-	// unless the files has the correct number of lines
-		// return 0
+	printf("%s\n", str);
+	printf("Input says it has %d lines.\n", ft_atoi(str));
+	printf("Input actually has %d lines.\n", ft_count_map_lines(str));
 
-	// get the "empty" and "obstacle" chars
-	// if the string has any other char
-		// return 0
+	if (ft_count_map_lines(str) <= 1)
+		return (0);
 
-	// unless each line, starting by the second, has the same length
-		// return 0
+	if (ft_count_map_lines(str) != ft_atoi(str))
+		return (0);
 
-	// set up map
+	e = ft_get_empty_char(str);
+	o = ft_get_obstacle_char(str);
+	printf("Empty spaces are: %c\n", e);
+	printf("Obstacles are: %c\n", o);
 
-	// return 1
+	if (!(is_only_empty_or_obstacle(str, e, o)))
+	{
+		printf("There are non-authorized chars in the map.\n");
+		return (0);
+	}
+
+	if (!(ft_lines_have_same_width(str)))
+		return (0);
+
+	return (1);
 }
