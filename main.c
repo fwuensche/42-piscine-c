@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 15:52:02 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 15:54:41 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,7 @@ void	print_int_array(int **arr, int length)
 	{
 		j = 0;
 		while (j < length)
-		{
-			printf("%d", arr[i][j]);
 			j++;
-		}
-		printf("\n");
 		i++;
 	}
 }

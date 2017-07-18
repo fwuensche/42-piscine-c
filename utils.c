@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:44:53 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/18 14:48:24 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 16:11:32 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int		ft_lines_have_same_width(char *str)
 	int w;
 	int i;
 
+	w = ft_get_lines_width(str);
 	while (*str != '\n')
 		str++;
 	str++;
-	w = ft_get_lines_width(str);
 	while (*str)
 	{
 		i = 0;

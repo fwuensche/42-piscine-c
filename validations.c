@@ -6,7 +6,7 @@
 /*   By: fwuensch <fwuensch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 15:47:30 by fwuensch          #+#    #+#             */
-/*   Updated: 2017/07/18 14:49:01 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 16:02:13 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		is_valid_input(char *str)
 	char	e;
 	char	o;
 
-	if (ft_count_map_lines(str) <= 1)
+	if (ft_count_map_lines(str) < 1)
 		return (0);
 	if (ft_count_map_lines(str) != ft_get_number_of_lines(str))
 		return (0);
@@ -28,7 +28,9 @@ int		is_valid_input(char *str)
 	if (!(is_only_empty_or_obstacle(str, e, o)))
 		return (0);
 	if (!(ft_lines_have_same_width(str)))
+	{
 		return (0);
+	}
 	return (1);
 }
 
