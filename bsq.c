@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bsq.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pebraun <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:34:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 16:57:04 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/18 13:41:30 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,9 @@ int		bsq(int **pt_sums, int width, int *ri, int *rj)
 		j = 0;
 		while (j < width)
 		{
-			// currently loops through all indices, just doesn't try to eval
-			// if not possible. May affect speed.
-			while (pt_sums[i + size] && j + size < width &&
-					pt_sums[i + size, j + size] - val(pt_sums[i - 1, j + size])
-					- val(pt_sums[i + size, j - 1] + val(pt_sums[i - 1, j - 1] < 1)))
+			while ((pt_sums[i + size]) && (j + size < width) &&
+				((pt_sums[i + size][j + size] - ft_val(pt_sums, i - 1, j + size)
+					- ft_val(pt_sums, i + size, j - 1) + ft_val(pt_sums, i - 1, j - 1)) < 1))
 			{
 				size++;
 				*ri = i;
