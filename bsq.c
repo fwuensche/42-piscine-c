@@ -6,7 +6,7 @@
 /*   By: pebraun <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:34:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/17 15:16:00 by pebraun          ###   ########.fr       */
+/*   Updated: 2017/07/17 16:57:04 by pebraun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,6 @@ int		bsq(int **pt_sums, int width, int *ri, int *rj)
 				size++;
 				*ri = i;
 				*rj = j;
-//				if (i + size >= width)	//actually, totally unhelpful statement
-//					return (size);
-//				if (j + size >= width && (j = width)) // i think it will help speed...
-//					break;
 			}
 			j++;
 		}
