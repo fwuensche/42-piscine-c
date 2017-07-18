@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:34:40 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 13:41:30 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 15:14:18 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		bsq(int **pt_sums, int width, int *ri, int *rj)
 					- ft_val(pt_sums, i + size, j - 1) + ft_val(pt_sums, i - 1, j - 1)) < 1))
 			{
 				size++;
+				printf("size: %i\ti: %i\tj: %i\n", size, i, j);
 				*ri = i;
 				*rj = j;
 			}

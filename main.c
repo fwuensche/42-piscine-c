@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 14:29:19 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 15:03:16 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	do_solve(char *str)
 	map = build_map(str);	// 1st line (info) is not kept in the array.
 	pt_sums = count_array(map, ft_get_obstacle_char(str),
 			ft_get_lines_width(str));
+	print_int_array(pt_sums, ft_get_lines_width(str));
 	if ((box_size = bsq(pt_sums, ft_get_lines_width(str), &i, &j)))
 		print_solution(str, box_size, i, j);
 	else
@@ -35,7 +36,27 @@ void	do_solve(char *str)
 	free_intarr(pt_sums);
 }
 
-int	main(int argc, char **argv)
+void	print_int_array(int **arr, int length)
+{
+	int i;
+	int j;
+
+	j = 0;
+	i = 0;
+	while (arr[i])
+	{
+		j = 0;
+		while (j < length)
+		{
+			printf("%d", arr[i][j]);
+			j++;
+		}
+		printf("\n");
+		i++;
+	}
+}
+
+int		main(int argc, char **argv)
 {
 	int		i;
 	int		fd;
