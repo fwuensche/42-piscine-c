@@ -3,8 +3,8 @@
 1. Eval Express
 2. Rush 02
 3. BSQ
-4. 42-testimonial (a more friendly approach to 42-stupidity, includind its name)
-5. import (shell script - in the root folder - used to merge all repos into one)
+4. [42-testimonial](https://github.com/fwuensche/42-testimonial) (a more friendly approach to 42-stupidity, includind its name)
+5. [import](https://github.com/fwuensche/42-piscine-c/blob/master/import) (shell script - in the root folder - used to merge all repos into one)
 
 # Results
 
