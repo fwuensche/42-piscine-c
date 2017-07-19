@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 16:55:14 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 17:42:24 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,15 @@ void	print_int_array(int **arr, int length)
 	}
 }
 
+void	read_from_stdin(char *str)
+{
+	if ((str = read_file(0)) && *str && is_valid_input(str))
+		do_solve(str);
+	else
+		ft_map_error();
+	free(str);
+}
+
 int		main(int argc, char **argv)
 {
 	int		i;
@@ -61,22 +70,17 @@ int		main(int argc, char **argv)
 	i = 1;
 	while (argc > 1 && i < argc)
 	{
-		fd = open(argv[i++], O_RDONLY);
-		str = read_file(fd);
-		if (*str && is_valid_input(str))
+		if ((fd = open(argv[i++], O_RDONLY)) < 0)
+			ft_map_error();
+		if (fd < 0)
+			continue;
+		if (((str = read_file(fd)) || 1) && *str && is_valid_input(str))
 			do_solve(str);
 		else
 			ft_map_error();
 		free(str);
 	}
 	if (argc <= 1)
-	{
-		str = read_file(0);
-		if (*str && is_valid_input(str))
-			do_solve(str);
-		else
-			ft_map_error();
-		free(str);
-	}
+		read_from_stdin(str);
 	return (0);
 }
