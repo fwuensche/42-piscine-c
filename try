@@ -1,0 +1,5 @@
+echo "Problem:\n"
+perl gen_map.pl $1 $2 $3 > sample
+cat sample
+echo "\nSolution:\n"
+./bsq sample
