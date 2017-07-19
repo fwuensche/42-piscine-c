@@ -1,0 +1,7 @@
+cd ../$1
+git reset --hard HEAD
+cd ../42-piscine-c
+git remote add -f $1 ../$1
+git merge $1/master
+mkdir $1
+
