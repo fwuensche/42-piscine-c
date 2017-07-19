@@ -4,8 +4,7 @@ cd ../42-piscine-c
 git remote add -f $1 ../$1
 git merge $1/master
 mkdir $1
-git add .
-git commit -m "Merge $1"
 git mv ex* $1
+git add .
 git commit -m "Move $1"
 
