@@ -1,0 +1,5 @@
+echo "Test case:"
+cat ./tests/test$1
+echo ""
+echo "Results:"
+cat ./tests/test$1 | ./rush-2
