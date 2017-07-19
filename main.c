@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 21:11:32 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 21:12:57 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	print_int_array(int **arr, int length)
 	}
 }
 
-void	read_from_stdin()
+void	read_from_stdin(void)
 {
 	char *str;
 
