@@ -6,7 +6,7 @@
 /*   By: pebraun <pebraun@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/17 12:14:15 by pebraun           #+#    #+#             */
-/*   Updated: 2017/07/18 17:42:24 by fwuensch         ###   ########.fr       */
+/*   Updated: 2017/07/18 21:11:32 by fwuensch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,10 @@ void	print_int_array(int **arr, int length)
 	}
 }
 
-void	read_from_stdin(char *str)
+void	read_from_stdin()
 {
+	char *str;
+
 	if ((str = read_file(0)) && *str && is_valid_input(str))
 		do_solve(str);
 	else
@@ -81,6 +83,6 @@ int		main(int argc, char **argv)
 		free(str);
 	}
 	if (argc <= 1)
-		read_from_stdin(str);
+		read_from_stdin();
 	return (0);
 }
